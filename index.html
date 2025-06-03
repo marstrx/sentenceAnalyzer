@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CountWord</h1>
+    <div class="container">
+        <h1>CountWord</h1>
     <p>count any text</p>
     <form action="">
         <label for="text">Enter text:</label>
         <textarea name="text" id="text" rows="10" cols="50"></textarea>
-        <button type="submit">count</button>
+        <button id="countBtn" type="submit">count</button>
     </form>
 
     <div>
         <h2>Result</h2>
-        <p>Word count: <span id="wordCount">0</span></p>
+        <p>Word count: <span id="wordCountResult">0</span></p>
     </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
