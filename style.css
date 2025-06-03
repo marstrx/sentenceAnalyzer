@@ -76,3 +76,9 @@ body{
     font-size: 18px;
     color: #333;
 }
+
+.wordCountResultDisplay {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+}
