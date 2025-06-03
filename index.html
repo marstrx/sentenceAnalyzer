@@ -8,15 +8,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>CountWord</h1>
-    <p>count any text</p>
-    <form action="">
-        <label for="text">Enter text:</label>
-        <textarea name="text" id="text" rows="10" cols="50"></textarea>
-        <button id="countBtn" type="submit">count</button>
+        <h1> Word Counter Tool</h1>
+        <p>Enter your text below to count the words:</p>
+    <form>
+        <!-- <div class="search-container">
+            <input type="search" id="searchInput" placeholder="Count word " />
+        </div> -->
+        <div class="textarea-container">
+            <label for="text">Enter text:</label>
+            <textarea name="text" id="text" rows="10" cols="50"></textarea>
+        </div>
+        <div>
+            <button id="countBtn" type="submit">Count</button>
+            <!-- <button id="searchBtn" type="submit">Search</button> -->
+        </div>
     </form>
 
-    <div>
+    <div class="result-container">
         <h2>Result</h2>
         <p>Word count: <span id="wordCountResult">0</span></p>
     </div>
