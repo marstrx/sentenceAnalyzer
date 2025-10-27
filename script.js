@@ -1,7 +1,7 @@
 // count words 
 const countWords=(sentence)=> {
     const countWords = sentence.trim().split(/\s+/);
-    return countWords.length;
+    return `words :${countWords.length}`;
 }
 
 console.log(countWords("hello world Marstrx"));
@@ -10,7 +10,7 @@ console.log(countWords("hello world Marstrx"));
 const countAllThingsExSpcs=(sentence)=>{
     const removeSpaces = sentence.replaceAll(" ","");
     const allThingsExSpcs = removeSpaces.length;
-    return allThingsExSpcs;
+    return `Chars : ${allThingsExSpcs}`;
 }
 
 console.log(countAllThingsExSpcs("hello world Marstrx"));
@@ -25,7 +25,36 @@ const countNumbers=(sentence)=>{
             count++;
         }
     }
-    return count ;
+    return `Numers : ${count}` ;
 }
 
 console.log(countNumbers("hello world Marstrx2025"));
+
+// count paragraphs 
+
+const countParagraphs=(sentence)=>{
+    let count =1;
+    for(const chars of sentence){
+        if(chars === "."){
+            count++;
+        }
+    }
+    return `Paragraphs : ${count}` ;
+}
+
+console.log(countParagraphs("hello world . Marstrx2025 . Marstrx2025"));
+
+
+// count vowels
+const countVowels=(sentence)=>{
+    const vowels = "aeiou";
+    let count =0;
+    for(const chars of sentence.toLowerCase()){
+        if(vowels.includes(chars)){
+            count++;
+        }
+    }
+    return `Vowels : ${count}`;
+}
+
+console.log(countVowels("hello world Marstrx2025"));
