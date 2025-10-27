@@ -58,3 +58,20 @@ const countVowels=(sentence)=>{
 }
 
 console.log(countVowels("hello world Marstrx2025"));
+
+
+//  find Longest Word Length
+const findLongestWordLengt=(sentence)=>{
+    let words = sentence.split(/\s+/);
+    let longestWord ="";
+
+    for(let word of words){
+        if(word.length > words.length){
+            longestWord = word ;
+        }
+    }
+
+    return `Longest word : ${longestWord}`
+}
+
+console.log(findLongestWordLengt("hello world Marstrx2025"));
