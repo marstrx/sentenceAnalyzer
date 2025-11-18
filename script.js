@@ -1,64 +1,48 @@
-import findLongestWordLengt from "./config.js/findLongestWordLengt.js";
-// count words 
-const countWords=(sentence)=> {
-    const countWords = sentence.trim().split(/\s+/);
-    return `words :${countWords.length}`;
+import { countWords } from "./modules/countWords.js";
+import { countCharacters } from "./modules/countCharacters.js";
+import { countNumbers } from "./modules/countNumbers.js";
+import { countParagraphs } from "./modules/countParagraphs.js";
+import { countVowels } from "./modules/countVowels.js";
+import { findLongestWord } from "./modules/findLongestWord.js";
+import { calculateReadingTime } from "./modules/calculateReadingTime.js";
+import { countSentences } from "./modules/countSentences.js";
+import { averageWordLength } from "./modules/averageWordLength.js";
+import { countConsonants } from "./modules/countConsonants.js";
+
+const textInput = document.getElementById("textInput");
+const resultsContainer = document.getElementById("results");
+
+function analyzeText(text) {
+  if (!text.trim()) {
+    resultsContainer.innerHTML =
+      '<p class="placeholder">Enter text to analyze...</p>';
+    return;
+  }
+
+  const readingTime = calculateReadingTime(text);
+  const results = [
+    `Reading Time: ${readingTime}`,
+    countWords(text),
+    countCharacters(text),
+    countSentences(text),
+    countNumbers(text),
+    countParagraphs(text),
+    countVowels(text),
+    countConsonants(text),
+    averageWordLength(text),
+    findLongestWord(text),
+  ];
+
+  resultsContainer.innerHTML = results
+    .map(
+      (result, index) =>
+        `<p${index === 0 ? ' class="reading-time"' : ""}>${result}</p>`
+    )
+    .join("");
 }
 
-console.log(countWords("hello world Marstrx"));
+textInput.addEventListener("input", (e) => {
+  analyzeText(e.target.value);
+});
 
-// count all chars nums sym but no spaces
-const countAllThingsExSpcs=(sentence)=>{
-    const removeSpaces = sentence.replaceAll(" ","");
-    const allThingsExSpcs = removeSpaces.length;
-    return `Chars : ${allThingsExSpcs}`;
-}
-
-console.log(countAllThingsExSpcs("hello world Marstrx"));
-
-// count numbers in the sentence
-
-const countNumbers=(sentence)=>{
-    const numbers = "0123456789";
-    let count =0;
-    for(const chars of sentence){
-        if(numbers.includes(chars)){
-            count++;
-        }
-    }
-    return `Numers : ${count}` ;
-}
-
-console.log(countNumbers("hello world Marstrx2025"));
-
-// count paragraphs 
-
-const countParagraphs=(sentence)=>{
-    let count =1;
-    for(const chars of sentence){
-        if(chars === "."){
-            count++;
-        }
-    }
-    return `Paragraphs : ${count}` ;
-}
-
-console.log(countParagraphs("hello world . Marstrx2025 . Marstrx2025"));
-
-
-// count vowels
-const countVowels=(sentence)=>{
-    const vowels = "aeiou";
-    let count =0;
-    for(const chars of sentence.toLowerCase()){
-        if(vowels.includes(chars)){
-            count++;
-        }
-    }
-    return `Vowels : ${count}`;
-}
-
-console.log(countVowels("hello world Marstrx2025"));
-
-
-console.log(findLongestWordLengt("hello world Marstrx2025"));
+analyzeText("");

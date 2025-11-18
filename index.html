@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentence Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sentence Analyzer</h1>
+      <div class="card">
+        <div class="input-section">
+          <label for="textInput">Enter your text:</label>
+          <textarea
+            id="textInput"
+            placeholder="Type or paste your text here..."
+          ></textarea>
+        </div>
+        <h2>Analysis Results</h2>
+        <div id="results" class="results">
+        </div>
+      </div>
+    </div>
     <script type="module" src="script.js"></script>
-</body>
+  </body>
 </html>
