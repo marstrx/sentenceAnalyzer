@@ -12,9 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/marstrx/sentenceAnalyzer.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["text","sentenceAnalyzer"],
+  "author": "Marstrx",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/marstrx/sentenceAnalyzer/issues"
   },
