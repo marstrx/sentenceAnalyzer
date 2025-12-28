@@ -1,26 +1,26 @@
-import { countWords } from "./modules/countWords";
-import { countCharacters } from "./modules/countCharacters";
-import { countNumbers } from "./modules/countNumbers";
-import { countParagraphs } from "./modules/countParagraphs";
-import { countVowels } from "./modules/countVowels";
-import { findLongestWord } from "./modules/findLongestWord";
-import { calculateReadingTime } from "./modules/calculateReadingTime";
-import { countSentences } from "./modules/countSentences";
-import { averageWordLength } from "./modules/averageWordLength";
-import { countConsonants } from "./modules/countConsonants";
+import { countWords } from "./modules/countWords.js";
+import { countCharacters } from "./modules/countCharacters.js";
+import { countNumbers } from "./modules/countNumbers.js";
+import { countParagraphs } from "./modules/countParagraphs.js";
+import { countVowels } from "./modules/countVowels.js";
+import { findLongestWord } from "./modules/findLongestWord.js";
+import { calculateReadingTime } from "./modules/calculateReadingTime.js";
+import { countSentences } from "./modules/countSentences.js";
+import { averageWordLength } from "./modules/averageWordLength.js";
+import { countConsonants } from "./modules/countConsonants.js";
 
 const textInput = document.getElementById("textInput") as HTMLTextAreaElement;
 const resultsContainer = document.getElementById("results") as HTMLDivElement;
 
-function analyzeText(text :string) :void {
+function analyzeText(text: string): void {
   if (!text.trim()) {
     resultsContainer.innerHTML =
       '<p class="placeholder">Enter text to analyze...</p>';
     return;
   }
 
-  const readingTime :string = calculateReadingTime(text);
-  const results :string[] = [
+  const readingTime: string = calculateReadingTime(text);
+  const results: string[] = [
     `Reading Time: ${readingTime}`,
     countWords(text),
     countCharacters(text),

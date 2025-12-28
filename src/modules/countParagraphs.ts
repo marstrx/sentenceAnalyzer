@@ -1,9 +1,4 @@
-export const countParagraphs = (sentence) => {
-  let count = 1;
-  for (const char of sentence) {
-    if (char === ".") {
-      count++;
-    }
-  }
-  return `Paragraphs: ${count}`;
+export const countParagraphs = (text: string): string => {
+  const paragraphs = text.trim().split(/\n+/).filter(Boolean);
+  return `Paragraphs: ${paragraphs.length}`;
 };

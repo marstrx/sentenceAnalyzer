@@ -1,10 +1,7 @@
-export const countConsonants = (text) => {
-  const consonants = "bcdfghjklmnpqrstvwxyz";
-  let count = 0;
-  for (const char of text.toLowerCase()) {
-    if (consonants.includes(char)) {
-      count++;
-    }
-  }
+export const countConsonants = (text: string): string => {
+  const count = Array.from(text.toLowerCase()).filter(char =>
+    "bcdfghjklmnpqrstvwxyz".includes(char)
+  ).length;
+
   return `Consonants: ${count}`;
 };

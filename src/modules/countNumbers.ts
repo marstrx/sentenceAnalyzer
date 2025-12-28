@@ -1,4 +1,4 @@
-export const countNumbers = (sentence) => {
+export const countNumbers = (sentence: string): string => {
   const numbers = "0123456789";
   let count = 0;
   for (const char of sentence) {

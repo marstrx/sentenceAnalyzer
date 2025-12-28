@@ -1,5 +1,4 @@
-export const countCharacters = (sentence) => {
+export const countCharacters = (sentence: string): string => {
   const removeSpaces = sentence.replaceAll(" ", "");
-  const allCharsExSpaces = removeSpaces.length;
-  return `Characters: ${allCharsExSpaces}`;
+  return `Characters: ${removeSpaces.length}`;
 };
