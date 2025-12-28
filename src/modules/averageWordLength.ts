@@ -1,12 +1,19 @@
-export const averageWordLength = (text) => {
-  const words = text
+export const averageWordLength = (text: string): string => {
+  const words: string[] = text
     .trim()
     .split(/\s+/)
-    .filter((word) => word.length > 0);
-  if (words.length === 0) return "Average Word Length: 0";
+    .filter((word: string) => word.length > 0);
 
-  const totalChars = words.reduce((sum, word) => sum + word.length, 0);
-  const average = (totalChars / words.length).toFixed(2);
+  if (words.length === 0) {
+    return "Avg Word Length: 0";
+  }
+
+  const totalChars: number = words.reduce(
+    (sum: number, word: string) => sum + word.length,
+    0
+  );
+
+  const average: string = (totalChars / words.length).toFixed(2);
 
   return `Avg Word Length: ${average}`;
 };
