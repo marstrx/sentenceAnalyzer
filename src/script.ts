@@ -9,18 +9,18 @@ import { countSentences } from "./modules/countSentences.js";
 import { averageWordLength } from "./modules/averageWordLength.js";
 import { countConsonants } from "./modules/countConsonants.js";
 
-const textInput = document.getElementById("textInput");
-const resultsContainer = document.getElementById("results");
+const textInput = document.getElementById("textInput") as HTMLTextAreaElement;
+const resultsContainer = document.getElementById("results") as HTMLDivElement;
 
-function analyzeText(text) {
+function analyzeText(text :string) :void {
   if (!text.trim()) {
     resultsContainer.innerHTML =
       '<p class="placeholder">Enter text to analyze...</p>';
     return;
   }
 
-  const readingTime = calculateReadingTime(text);
-  const results = [
+  const readingTime :string = calculateReadingTime(text);
+  const results :string[] = [
     `Reading Time: ${readingTime}`,
     countWords(text),
     countCharacters(text),
@@ -41,8 +41,9 @@ function analyzeText(text) {
     .join("");
 }
 
-textInput.addEventListener("input", (e) => {
-  analyzeText(e.target.value);
+textInput.addEventListener("input", (e: Event) => {
+  const target = e.target as HTMLTextAreaElement;
+  analyzeText(target.value);
 });
 
 analyzeText("");
