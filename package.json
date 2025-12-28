@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/marstrx/sentenceAnalyzer.git"
   },
-  "keywords": ["text","sentenceAnalyzer"],
+  "keywords": [
+    "text",
+    "sentenceAnalyzer"
+  ],
   "author": "Marstrx",
   "license": "MIT",
   "bugs": {
@@ -20,6 +23,7 @@
   },
   "homepage": "https://github.com/marstrx/sentenceAnalyzer#readme",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "typescript": "^5.9.3"
   }
 }
