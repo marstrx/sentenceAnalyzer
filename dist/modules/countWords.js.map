@@ -1,0 +1,1 @@
+{"version":3,"file":"countWords.js","sourceRoot":"","sources":["../../src/modules/countWords.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,UAAU,GAAG,CAAC,QAAgB,EAAU,EAAE;IACrD,MAAM,KAAK,GAAG,QAAQ,CAAC,IAAI,EAAE,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,OAAO,CAAC,CAAC;IAC3D,OAAO,UAAU,KAAK,CAAC,MAAM,EAAE,CAAC;AAClC,CAAC,CAAC"}

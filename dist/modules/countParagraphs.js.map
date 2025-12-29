@@ -1,0 +1,1 @@
+{"version":3,"file":"countParagraphs.js","sourceRoot":"","sources":["../../src/modules/countParagraphs.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,eAAe,GAAG,CAAC,IAAY,EAAU,EAAE;IACtD,MAAM,UAAU,GAAG,IAAI,CAAC,IAAI,EAAE,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,OAAO,CAAC,CAAC;IAC5D,OAAO,eAAe,UAAU,CAAC,MAAM,EAAE,CAAC;AAC5C,CAAC,CAAC"}

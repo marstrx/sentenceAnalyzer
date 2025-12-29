@@ -1,0 +1,1 @@
+{"version":3,"file":"countSentences.js","sourceRoot":"","sources":["../../src/modules/countSentences.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,cAAc,GAAG,CAAC,IAAY,EAAU,EAAE;IACrD,MAAM,SAAS,GAAG,IAAI,CAAC,KAAK,CAAC,SAAS,CAAC,IAAI,EAAE,CAAC;IAC9C,MAAM,KAAK,GAAG,SAAS,CAAC,MAAM,IAAI,CAAC,CAAC;IACpC,OAAO,cAAc,KAAK,EAAE,CAAC;AAC/B,CAAC,CAAC"}
